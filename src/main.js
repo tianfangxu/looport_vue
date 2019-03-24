@@ -7,6 +7,14 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import VueResource from 'vue-resource'
 
+import common from './tools/filters';
+
+//全局过滤器
+Object.keys(common).forEach(key => {
+		Vue.filter(key, common[key])
+})
+
+
 Vue.use(ElementUI);
 Vue.use(VueResource)
 
@@ -26,6 +34,9 @@ new Vue({
   		if(!sessionStorage['sessionId']){
   				window.location.href="#/"
   		}
+  	},
+  	randomstr(){		//生产随机字符串
+  		return Math.random().toString(36).substr(7);
   	}
   }
 })

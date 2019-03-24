@@ -80,6 +80,7 @@
 				    });
 	        	}
 	        }, (res) => {
+	        	loding.close();
 	        	this.$message({
 			          message: "服务维护中...",
 			          type: 'error'

@@ -1,7 +1,7 @@
 <template>
 	<el-container>
 		  <el-header height="110px">
-		  		<h1>{{nike + ','}}欢迎来到looport</h1>
+		  		<h1>欢迎来到looport</h1>
 		  		<a class="logout" @click="logout">退出</a>
 		  </el-header>
 		  <el-container>
@@ -47,7 +47,7 @@
 	  		}
 	  	},
 	   	methods: {
-	      handleOpen(key, keyPath) {this.linkHref('#/index/user')},
+	      handleOpen(key, keyPath) {},
 	      handleClose(key, keyPath) {window.location.href="#/index";},
 	      linkHref(uri){window.location.href=uri;},
 	      logout(){
@@ -58,8 +58,6 @@
 	    },
 	    created(){
 	    	this.$root.islogin();
-	    	this.nike = this.$root.userNike;
-	    	console.log(this.nike)
 	    }
 	}
 </script>
