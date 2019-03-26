@@ -143,7 +143,7 @@
 		          
 		        },
 		        formLabelWidth: '80px',
-		        dynamicTags: [],
+		        dynamicTags: ['查询'],
 		        inputVisible: false,
 		        inputValue: ''
 			}
@@ -293,7 +293,7 @@
 	         	this.form.pid='';
 	         	this.form.level='';
 	         	this.form.methods=[];
-	         	this.dynamicTags=[]
+	         	this.dynamicTags=['查询']
 		    },
 		    addMenuSubmit(){
 		    	var data = this.form;
